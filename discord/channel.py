@@ -280,6 +280,11 @@ class TextChannel(discord.abc.Messageable, discord.abc.GuildChannel, Hashable):
         ...
 
     @overload
+    async def get_name(self) -> Optional[TextChannel]:
+        return str(data["name"])
+        
+    
+    @overload
     async def edit(self) -> Optional[TextChannel]:
         ...
 
